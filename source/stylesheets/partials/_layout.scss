@@ -1,0 +1,21 @@
+#main {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+section {
+  @include outer-container;
+}
+.footer-2, .push {
+  height: 17em;
+  @include media($large-screen) {
+   height: 4em;
+  }
+}
+
+
+ html, body {
+  height: 100%;
+ }
