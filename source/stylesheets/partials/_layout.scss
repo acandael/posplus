@@ -7,6 +7,7 @@
 
 section {
   @include outer-container;
+  margin-top: em(40);
 }
 .footer-2, .push {
   height: 17em;
