@@ -1,0 +1,19 @@
+.lead {
+  @include span-columns(12);
+  margin-bottom: em(20);
+}
+.member {
+  @include span-columns (3 of 12);
+  @include omega(4n);
+  background-color: white;
+  padding: em(10);
+  box-shadow: 0 1px 4px 1px #b4b6a9,2px 2px 1px 0 #fff inset;
+  margin-bottom: em(20);
+
+  h5 {
+    font-size: 18px;
+    border-bottom: 1px solid #cfd1c6;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+}
