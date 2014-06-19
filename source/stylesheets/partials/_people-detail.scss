@@ -1,0 +1,15 @@
+article {
+  @include span-columns(12);
+  img {
+    float: right;
+    margin-left: em(20);
+    border: 1px solid $light-gray;
+    padding: 3px;
+  }
+  h2 {
+    margin-top: em(20);
+  }
+  li {
+    margin-bottom: 1em;
+  }
+}
