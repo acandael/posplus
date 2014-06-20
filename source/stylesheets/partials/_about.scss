@@ -1,4 +1,4 @@
-  article {
+  article.about {
     @include span-columns(8 of 12);
     background-color: white;
     box-shadow: 0 1px 4px 1px $light-gray;
