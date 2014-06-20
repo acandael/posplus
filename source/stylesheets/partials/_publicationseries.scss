@@ -1,23 +1,27 @@
-section.working-papers, section.technical-reports {
-  background-color: white;
-  padding: 3em;
+section.publications {
+  section.working-papers, section.technical-reports {
+    @include span-columns(6);
+    @include omega(2n);
+    background-color: white;
+    padding: 3em;
 
-  ul {
-    margin-left: em(10);
-    margin-top: em(10);
-  }
+    ul {
+      margin-left: em(10);
+      margin-top: em(10);
+    }
 
-  li {
-    margin-bottom: em(10);
-  }
+    li {
+      margin-bottom: em(10);
+    }
 
-  a {
-    text-decoration: underline;
-  }
+    a {
+      text-decoration: underline;
+    }
 
-  i {
-    color: $base-accent-color;
-    font-size: $base-font-size * 1.2;
-    margin-left: em(10);
+    i {
+      color: $base-accent-color;
+      font-size: $base-font-size * 1.2;
+      margin-left: em(10);
+    }
   }
 }
