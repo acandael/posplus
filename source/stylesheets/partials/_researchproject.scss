@@ -1,0 +1,21 @@
+section.project {
+  article.project {
+    padding: 3em;
+    background: white;
+    box-shadow: 0 1px 4px 1px #dddddd;
+
+    i{
+      font-size: $base-font-size * 1.2;
+      color: #40526b;
+      margin-right: em(10);
+    }
+
+    ul {
+      margin-top: em(10);
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
