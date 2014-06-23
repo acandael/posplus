@@ -1,3 +1,4 @@
+section.home {
 .hero {
   @include span-columns(8);
 	$hero-background: desaturate(darken($base-accent-color, 20), 30);	
@@ -144,4 +145,5 @@
     border-bottom: 1px solid transparentize($base-font-color, .8);
     display: inline-block;
   }
+ }
 }
