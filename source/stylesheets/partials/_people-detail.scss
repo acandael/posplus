@@ -1,8 +1,22 @@
+section {
+  @include outer-container;
+  @include media($small-screen) {
+    padding: 1.75em;
+    padding-top: 2em;
+  }
 article {
   @include span-columns(12);
   img {
-    float: right;
-    margin-left: em(20);
+    @include media($large-screen) {
+      float: right;
+      margin-left: em(20);
+    }
+    @include media($small-screen) {
+      display: block;
+      margin: auto;
+      margin-top: em(20);
+      margin-bottom: em(20);
+    }
     border: 1px solid $light-gray;
     padding: 3px;
   }
@@ -12,4 +26,5 @@ article {
   li {
     margin-bottom: 1em;
   }
+ }
 }
