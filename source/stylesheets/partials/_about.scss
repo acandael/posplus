@@ -1,8 +1,12 @@
+section {
   article.about {
-    @include span-columns(8 of 12);
+    @include media($large-screen) {
+      @include span-columns(8 of 12);
+      padding: 3em;
+    }
+    padding: .75em;
     background-color: white;
     box-shadow: 0 1px 4px 1px $light-gray;
-    padding: 3em;
     h1 {
       text-align: center;
       margin-bottom: em(20);
@@ -10,10 +14,14 @@
 
   }
   aside {
-    @include span-columns(4 of 12);
-    @include omega();
+    @include fill-parent;
+    @include media($large-screen) {
+      @include span-columns(4 of 12);
+      @include omega();
+    }
     h2 {
       font-size: $base-font-size * 1.2;
       margin-bottom: 1em;
     }
   }
+}
