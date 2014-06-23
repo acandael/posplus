@@ -1,17 +1,28 @@
+section {
+  @include media($small-screen) {
+    padding: 1em;
+  }
   div.bullets {
     $icon-bullet-size: 3.5em;
     overflow: auto;
     margin-bottom: $base-line-height;
-    .two-col-bullet {
-      @include span-columns(6);
-      @include omega(2n);
+    .bullet {
+      @include media($large-screen) {
+        @include span-columns(6);
+        @include omega(2n);
+      }
+      @include media($small-screen) {
+        margin-top: em(20);
+      }
       background: white;
       padding: 1em;
 
       
 
       .bullet-icon {
-        float: left;
+        @include media($large-screen) {
+          float: left;
+        }
         background: $base-accent-color;
         padding: $icon-bullet-size /4;
         border-radius: 50%;
@@ -27,8 +38,14 @@
         background: adjust-hue($base-accent-color, -50);
       }
       .bullet-content {
+        @include media($small-screen) {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        @include media($large-screen) {
         margin-left: $icon-bullet-size *1.4;
         margin-bottom: 2em;
+        }
       }
       h2 {
         font-size: $icon-bullet-size /2.5;
@@ -39,3 +56,4 @@
       }
     }
   }
+}
