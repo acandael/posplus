@@ -1,4 +1,5 @@
-section.home {
+section {
+  @include outer-container;
 .hero {
   @include media($medium-screen) {
     @include span-columns(8);
