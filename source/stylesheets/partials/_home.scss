@@ -74,7 +74,10 @@ section.home {
       text-align: center;
     }
     p {
-      padding-left: 3em;
+      margin-left: 1.75em;
+      @include media($large-screen) {
+        padding-left: 3em;
+      }
       margin-top: em(10);
     }
   }
@@ -117,7 +120,12 @@ section.home {
   }
 
   .bullet-icon {
-    float: left;
+    @include media($large-screen) {
+      float: left;
+    }
+    @include media($small-screen) {
+      margin: auto;
+    }
     background: $base-accent-color;
     padding: $icon-bullet-size /4;
     border-radius: 50%;
@@ -138,8 +146,13 @@ section.home {
   }
 
   .bullet-content {
-    margin-left: $icon-bullet-size *1.4;
-    margin-bottom: 2em;
+      margin-left: $icon-bullet-size * .5;
+      margin-right: $icon-bullet-size * .5;
+      margin-bottom: 1em;
+    @include media($large-screen) {
+      margin-left: $icon-bullet-size *1.4;
+      margin-bottom: 2em;
+    }
   }
 
   h2 {
