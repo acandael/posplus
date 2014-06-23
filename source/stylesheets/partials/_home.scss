@@ -1,6 +1,8 @@
 section.home {
 .hero {
-  @include span-columns(8);
+  @include media($medium-screen) {
+    @include span-columns(8);
+  }
 	$hero-background: desaturate(darken($base-accent-color, 20), 30);	
 	$hero-color: white;
 
@@ -57,8 +59,10 @@ section.home {
 }
 
 .news {
-  @include span-columns(4);
-  @include omega();
+  @include media($medium-screen) {
+    @include span-columns(4);
+    @include omega();
+  }
   background-color: white;
   box-shadow: 0 1px 4px 1px $light-gray;
   min-height: 283px;
@@ -89,7 +93,7 @@ section.home {
 
   
 // change ".three-col-bullet" class to this for two bullet layout
-  .two-col-bullet {
+  .bullet {
     @include media($large-screen) {
       @include span-columns(6);
       @include omega(2n);  
