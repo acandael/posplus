@@ -8,6 +8,10 @@
 section {
   @include outer-container;
   margin-top: em(40);
+  @include media($medium-screen) {
+    margin-left: em(20);
+    margin-right: em(20);
+  }
 }
 .footer-2, .push {
   height: 17em;
