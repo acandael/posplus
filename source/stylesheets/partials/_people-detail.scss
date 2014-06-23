@@ -3,6 +3,9 @@ section {
   @include media($small-screen) {
     padding: 1.75em;
     padding-top: 2em;
+    h1 {
+      font-size: 2em;
+    }
   }
 article {
   @include span-columns(12);
