@@ -1,35 +1,44 @@
-.lead {
-  @include span-columns(12);
-  margin-bottom: em(20);
-  @include media($small-screen) {
-    margin-top: em(40);
-    h1 {
+section.people {
+  .lead {
+    margin-bottom: em(20);
+    padding: .75em;
+    background-color: white;
+    box-shadow: 0 1px 4px 1px $light-gray;
+    @include media($small-screen) {
+      margin-top: em(20);
+      overflow: hidden;
+      h1 {
+        text-align: center;
+        margin-bottom: em(10);
+      }
+    }
+    @include media($medium-screen) {
+      @include span-columns(12);
+      margin-top: 0;
+      padding-left: 3em;
+      padding-right: 3em;
+    }
+  }
+
+  .member {
+    @include media($medium-screen) {
+      @include span-columns (3 of 12);
+      @include omega(4n);
+    }
+
+    @include media($small-screen) {
       text-align: center;
-      margin-bottom: em(10);
     }
-    p {
-      margin-left: 1.75em;
+    background-color: white;
+    padding: em(10);
+    box-shadow: 0 1px 4px 1px #b4b6a9,2px 2px 1px 0 #fff inset;
+    margin-bottom: em(20);
+
+    h5 {
+      font-size: 18px;
+      border-bottom: 1px solid #cfd1c6;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
     }
-  }
-}
-.member {
-  @include media($medium-screen) {
-    @include span-columns (3 of 12);
-    @include omega(4n);
-  }
-
-  @include media($small-screen) {
-    text-align: center;
-  }
-  background-color: white;
-  padding: em(10);
-  box-shadow: 0 1px 4px 1px #b4b6a9,2px 2px 1px 0 #fff inset;
-  margin-bottom: em(20);
-
-  h5 {
-    font-size: 18px;
-    border-bottom: 1px solid #cfd1c6;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
   }
 }
