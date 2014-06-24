@@ -1,9 +1,19 @@
-section {
+section.home {
   @include outer-container;
-.hero {
-  @include media($medium-screen) {
-    @include span-columns(8);
+
+
+  .hero {
+    @include media($medium-screen) {
+      @include span-columns(8);
+      @include media($small-screen) {
+        margin-bottom: em(20);
+      }
+    }
+
+  @include media($small-screen) {
+    margin-top: em(20);
   }
+
 	$hero-background: desaturate(darken($base-accent-color, 20), 30);	
 	$hero-color: white;
 
@@ -64,6 +74,10 @@ section {
     @include span-columns(4);
     @include omega();
   }
+
+  @include media($small-screen) {
+    margin-top: em(20);
+  }
   background-color: white;
   box-shadow: 0 1px 4px 1px $light-gray;
   min-height: 283px;
@@ -86,7 +100,9 @@ section {
 
 .research {
   @include span-columns(12);
-  margin-top: em(60);
+  @include media($medium-screen) {
+    margin-top: em(60);
+  }
 }
 
 .bullets {
