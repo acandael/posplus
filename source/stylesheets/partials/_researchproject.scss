@@ -1,8 +1,34 @@
 section.project {
   article.project {
-    padding: 3em;
+    margin-top: em(20);
+    padding: .75em;
     background: white;
     box-shadow: 0 1px 4px 1px #dddddd;
+
+    @include media($large-screen) {
+      margin-top: 0;
+      padding: 3em;
+    }
+
+    img {
+      margin-top: 0;
+      @include media($small-screen) {
+        margin-top: em(20);
+      }
+    }
+
+    h1 {
+      @include media($small-screen) {
+        font-size: $base-font-size * 1.2;
+      }
+    }
+
+    h2 {
+      @include media($small-screen) {
+        font-size: $base-font-size * 1.2;
+        text-align: center;
+      }
+    }
 
     i{
       font-size: $base-font-size * 1.2;
@@ -12,6 +38,9 @@ section.project {
 
     ul {
       margin-top: em(10);
+      @include media($small-screen) {
+        margin-top: em(20);
+      }
     }
 
     a {
