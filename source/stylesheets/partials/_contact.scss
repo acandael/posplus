@@ -1,6 +1,16 @@
 section.contact {
+  .title {
+    margin-top: em(20);
+    margin-bottom: em(20);
+    text-align: center;
+    @include media($medium-screen) {
+      margin-top: 0;
+    }
+  }
 div.where {
-  @include span-columns(8);
+  @include media($medium-screen) {
+    @include span-columns(8);
+  }
   margin-top: em(20);
   .accordion-tabs-minimal {
     $tab-border-color: $base-border-color;
@@ -101,13 +111,16 @@ div.where {
 }
 
 div.information {
-  @include span-columns(4);
-  @include omega();
   background: white;
   box-shadow: 0 1px 4px 1px $light-gray;
-  padding: 2em;
   padding-top: 1em;
+  padding-left: .75em;
   padding-bottom: 1em;
+  @include media($medium-screen) {
+    @include span-columns(4);
+    @include omega();
+    padding: 2em;
+  }
 
   h2 {
     font-size: $base-font-size * 1.5;
