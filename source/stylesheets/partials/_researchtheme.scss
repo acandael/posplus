@@ -1,7 +1,15 @@
 
 .projects {
-  @include span-columns(8);
-  padding: 3em;
+  @include media($small-screen) {
+    margin-top: em(20);
+    padding: .75em;
+  }
+
+  @include media($large-screen) {
+    @include span-columns(8);
+    padding: 3em;
+  }
+
   background: white;
   box-shadow: 0 1px 4px 1px $light-gray;
 
@@ -12,8 +20,15 @@
 }
 
 aside {
-  @include span-columns(4);
-  padding:3em;
+  @include media($small-screen) {
+    padding: .75em;
+  }
+
+  @include media($large-screen) {
+    @include span-columns(4);
+    padding:3em;
+  }
+
   background: white;
   box-shadow: 0 1px 4px 1px $light-gray;
 }
