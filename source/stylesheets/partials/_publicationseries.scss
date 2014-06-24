@@ -1,13 +1,23 @@
 section.publications {
   section.working-papers, section.technical-reports {
-    @include span-columns(6);
-    @include omega(2n);
+    @include media($medium-screen) {
+      @include span-columns(6);
+      @include omega(2n);
+      padding: 3em;
+    }
     background-color: white;
-    padding: 3em;
+    box-shadow: 0 1px 4px 1px $light-gray;
+
+    h2 {
+      @include media($small-screen) {
+        font-size: $base-font-size * 1.2;
+        text-align: center;
+      }
+    }
 
     ul {
       margin-left: em(10);
-      margin-top: em(10);
+      margin-top: em(20);
     }
 
     li {
