@@ -11,7 +11,7 @@
   }
 
   background: white;
-  box-shadow: 0 1px 4px 1px $light-gray;
+  @extend .box-shadow;
 
   h1 {
     text-align: center;
@@ -37,5 +37,5 @@ aside {
   }
 
   background: white;
-  box-shadow: 0 1px 4px 1px $light-gray;
+  @extend .box-shadow;
 }

@@ -12,9 +12,9 @@ section.about {
     @include media($medium-screen) {
       @include span-columns(8);
       padding: 3em;
-      box-shadow: 0 1px 4px 1px $light-gray;
     }
     background-color: white;
+    @extend .box-shadow;
     h1 {
       text-align: center;
       margin-top: em(20);
@@ -39,6 +39,7 @@ section.about {
     padding: .75em;
     overflow: hidden;
     background-color: white;
+    @extend .box-shadow;
     @include clearfix;
     @include media($medium-screen) {
       @include span-columns(4);

@@ -3,7 +3,7 @@ section.people {
     margin-bottom: em(20);
     padding: .75em;
     background-color: white;
-    box-shadow: 0 1px 4px 1px $light-gray;
+    @extend .box-shadow;
     margin-top: em(20);
     overflow: hidden;
     h1 {

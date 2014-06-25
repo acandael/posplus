@@ -9,6 +9,7 @@ section.researchthemes {
       margin-top: em(20);
       background: white;
       padding: 1em;
+      @extend .box-shadow;
       @include media($medium-screen) {
         @include span-columns(6);
         @include omega(2n);

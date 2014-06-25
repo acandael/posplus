@@ -1,6 +1,20 @@
 section {
+  @include outer-container;
+  padding: .75em;
+  @include media($medium-screen) {
+    padding: 0;
+  }
   article {
-    @include span-columns(12);
+    background-color: white;
+    @extend .box-shadow;
+    margin-top: .75em;
+    margin-bottom: em(20);
+    padding: .75em;
+    padding-top: 0;
+    @include media($medium-screen) {
+      padding: 3em;
+      padding-top: .75em;
+    }
     img {
       display: block;
       margin: auto;

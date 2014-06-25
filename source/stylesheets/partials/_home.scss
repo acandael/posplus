@@ -76,7 +76,7 @@ section.home {
   }
 
   background-color: white;
-  box-shadow: 0 1px 4px 1px $light-gray;
+  @extend .box-shadow;
   .news-inner {
     padding-top: .75em;
     padding-bottom: .75em;
@@ -115,6 +115,7 @@ section.home {
 // change ".three-col-bullet" class to this for two bullet layout
   .bullet {
     background: white;
+    @extend .box-shadow;
     margin-bottom: em(20);
     padding-top: em(20);
     padding-bottom: em(10);
