@@ -1,18 +1,13 @@
 section.home {
   @include outer-container;
-
-
+  padding: .75em;
   .hero {
+    margin-top: em(20);
+    margin-bottom: em(20);
     @include media($medium-screen) {
       @include span-columns(8);
-      @include media($small-screen) {
-        margin-bottom: em(20);
-      }
     }
 
-  @include media($small-screen) {
-    margin-top: em(20);
-  }
 
 	$hero-background: desaturate(darken($base-accent-color, 20), 30);	
 	$hero-color: white;
@@ -32,7 +27,10 @@ section.home {
 	.hero-inner {
 		@include outer-container;
 		@include clearfix;
-		padding: 3em;
+		padding: .75em;
+    @include media($medium-screen) {
+      padding: 3em;
+    }
 		margin: auto;
 		text-align: left;
 		color: $hero-color;
@@ -70,30 +68,31 @@ section.home {
 }
 
 .news {
+  margin-top: em(20);
   @include media($medium-screen) {
     @include span-columns(4);
     @include omega();
+    min-height: 283px;
   }
 
-  @include media($small-screen) {
-    margin-top: em(20);
-  }
   background-color: white;
   box-shadow: 0 1px 4px 1px $light-gray;
-  min-height: 283px;
   .news-inner {
-    @include outer-container;
-    margin: auto;
-    padding-top: 2em;
+    padding-top: .75em;
+    padding-bottom: .75em;
     h2 {
+      font-size: $base-font-size * 1.2;
       text-align: center;
+      @include media($medium-screen) {
+        font-size: $base-font-size * 2;
+      }
     }
     p {
       margin-left: 1.75em;
-      @include media($large-screen) {
-        padding-left: 3em;
-      }
       margin-top: em(10);
+      @include media($medium-screen) {
+        padding-left: 1em;
+      }
     }
   }
 }
@@ -101,7 +100,7 @@ section.home {
 .research {
   @include span-columns(12);
   @include media($medium-screen) {
-    margin-top: em(60);
+    margin-top: em(40);
   }
 }
 
@@ -109,19 +108,26 @@ section.home {
   $icon-bullet-size: 3.5em;
 
   overflow: auto;
+  margin-top: em(20);
   margin-bottom: $base-line-height;
 
   
 // change ".three-col-bullet" class to this for two bullet layout
   .bullet {
-    @include media($large-screen) {
+    background: white;
+    margin-bottom: em(20);
+    padding-top: em(20);
+    padding-bottom: em(10);
+    @include media($medium-screen) {
       @include span-columns(6);
       @include omega(2n);  
+      padding-left: em(10);
+      min-height: 280px;
     } 
   }
   
   .three-col-bullet {
-    @include media($large-screen) {
+    @include media($medium-screen) {
       @include span-columns(4);
       @include omega(3n);
     }
@@ -137,11 +143,10 @@ section.home {
   }
 
   .bullet-icon {
-    @include media($large-screen) {
+    margin: auto;
+
+    @include media($medium-screen) {
       float: left;
-    }
-    @include media($small-screen) {
-      margin: auto;
     }
     background: $base-accent-color;
     padding: $icon-bullet-size /4;
@@ -166,7 +171,7 @@ section.home {
       margin-left: $icon-bullet-size * .5;
       margin-right: $icon-bullet-size * .5;
       margin-bottom: 1em;
-    @include media($large-screen) {
+    @include media($medium-screen) {
       margin-left: $icon-bullet-size *1.4;
       margin-bottom: 2em;
     }

@@ -1,10 +1,13 @@
 section.contact {
+  @include outer-container;
+  padding: .75em;
   .title {
     margin-top: em(20);
     margin-bottom: em(20);
     text-align: center;
     @include media($medium-screen) {
       margin-top: 0;
+      text-align: left;
     }
   }
 div.where {
@@ -14,6 +17,13 @@ div.where {
   margin-top: em(20);
   .accordion-tabs-minimal {
     $tab-border-color: $base-border-color;
+    h2 {
+      font-size: $base-font-size * 1.2;
+      @include media($medium-screen) {
+        font-size: $base-font-size * 2;
+      }
+      margin-bottom: em(10);;
+    }
     $tab-border: 1px solid $tab-border-color;
     $tab-content-background: white;
     $tab-active-background: $tab-content-background;
@@ -21,7 +31,6 @@ div.where {
     $tab-inactive-hover-color: darken($light-gray, 5);
     $tab-mode: $medium-screen;
 
-    @include clearfix;
     border: $tab-border;
     border-radius: $base-border-radius;
     margin-bottom: $base-line-height;
@@ -138,7 +147,9 @@ div.information {
 }
 
 div.map {
-  @include span-columns(12);
+  @include media($medium-screen) {
+    @include span-columns(12);
+  }
   margin-top: em(20);
   iframe {
     width: 100%;
