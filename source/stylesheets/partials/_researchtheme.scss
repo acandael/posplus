@@ -1,17 +1,21 @@
 
 .projects {
-  @include media($small-screen) {
-    margin-top: em(20);
-    padding: .75em;
-  }
+  overflow: hidden;
+  margin-top: em(20);
+  padding: .75em;
 
   @include media($large-screen) {
     @include span-columns(8);
+    margin-top: 0;
     padding: 3em;
   }
 
   background: white;
   box-shadow: 0 1px 4px 1px $light-gray;
+
+  h1 {
+    text-align: center;
+  }
 
   .project {
     margin-top: em(20);
@@ -20,13 +24,16 @@
 }
 
 aside {
-  @include media($small-screen) {
-    padding: .75em;
-  }
-
-  @include media($large-screen) {
+  padding: .75em;
+  margin-top: em(20);
+  @include media($medium-screen) {
     @include span-columns(4);
     padding:3em;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: $base-font-size * 1.2;
   }
 
   background: white;
