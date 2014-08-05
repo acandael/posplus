@@ -12,6 +12,7 @@ section.about {
     @include media($medium-screen) {
       @include span-columns(8);
       padding: 3em;
+      margin-top: 0;
     }
     background-color: white;
     @extend .box-shadow;
